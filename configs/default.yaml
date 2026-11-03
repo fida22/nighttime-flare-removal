@@ -1,0 +1,39 @@
+# Shared configuration. Baseline and proposed model MUST use the same values
+# (except model.*) so the comparison is fair.
+project:
+  drive_root: /content/drive/MyDrive/Flare_Removal_Project
+  data_root: /content/flare_data          # extracted archives (temporary Colab disk)
+  seed: 42
+
+data:
+  # Pre-generated pairs (recommended after running the OFFICIAL generator):
+  #   <pairs_root>/input/<name>.png  and  <pairs_root>/target/<name>.png
+  pairs_root: /content/flare_pairs
+  input_dir_name: input
+  target_dir_name: target
+  crop_size: 256
+  batch_size: 4
+  num_workers: 2
+  val_fraction: 0.1
+  # Split by background identity: the text before this separator in the filename
+  # is treated as the background id (e.g. "bg0012__flare0034.png" -> "bg0012").
+  group_separator: "__"
+  split_file: splits/split_seed42.json     # saved under drive_root, documents the split
+
+model:
+  name: unet                # unet | attention | multiscale | attention_multiscale
+  base_channels: 32
+  depth: 4
+  dilations: [1, 2, 4]
+
+train:
+  epochs: 20
+  lr: 1.0e-4
+  optimizer: adam
+  loss: l1                  # l1 | l1_ssim
+  ssim_weight: 0.1
+  amp: true
+  grad_clip: 1.0
+
+eval:
+  batch_size: 1

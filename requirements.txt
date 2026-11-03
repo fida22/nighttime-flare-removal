@@ -1,0 +1,11 @@
+# Colab already ships torch/torchvision/numpy/matplotlib; install only what is missing.
+torch
+torchvision
+numpy
+pillow
+pyyaml
+matplotlib
+scikit-image
+tqdm
+# optional
+lpips
