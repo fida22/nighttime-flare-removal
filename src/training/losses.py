@@ -40,4 +40,13 @@ class L1SSIMLoss(nn.Module):
 
 def build_loss(cfg):
     t = cfg["train"]
-    return L1SSIMLoss(t["ssim_weight"]) if t["loss"] == "l1_ssim" else L1Loss()
+    loss_name = t["loss"]
+
+    if loss_name == "l1":
+        return L1Loss()
+
+    elif loss_name == "l1_ssim":
+        return L1SSIMLoss(t["ssim_weight"])
+
+    else:
+        raise ValueError(f"Unknown loss function: {loss_name}")
