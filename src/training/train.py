@@ -1,22 +1,28 @@
 
 """
-Shared, resumable training loop for the baseline and proposed models.
+Shared, resumable training loop for baseline and proposed models.
 
 Usage from a notebook:
 
     from src.training.train import fit
 
     # Baseline
-    fit(cfg, model_name="unet",
+    fit(
+        cfg,
+        model_name="unet",
         train_loader=train_loader,
-        val_loader=val_loader)
+        val_loader=val_loader
+    )
 
     # Proposed model
-    fit(cfg, model_name="attention_multiscale",
+    fit(
+        cfg,
+        model_name="attention_multiscale",
         train_loader=train_loader,
-        val_loader=val_loader)
+        val_loader=val_loader
+    )
 
-The DataLoaders can be supplied directly from a notebook.
+DataLoaders can be supplied directly from a notebook.
 Alternatively, build_loaders(cfg) can be used once
 src/data/dataset.py has been implemented.
 """
@@ -47,6 +53,7 @@ CKPT_NAMES = {
 
 def set_seed(seed):
     """Set random seeds for reproducibility."""
+
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -57,6 +64,7 @@ def set_seed(seed):
 
 def ckpt_paths(drive_root, model_name):
     """Create checkpoint paths."""
+
     stem = os.path.join(
         drive_root,
         "checkpoints",
@@ -89,6 +97,7 @@ def run_epoch(
     ctx = torch.enable_grad() if train else torch.no_grad()
 
     with ctx:
+
         for batch in tqdm(loader, leave=False):
 
             x = batch["input"].to(device)
@@ -119,8 +128,10 @@ def run_epoch(
 
                     if clip:
                         scaler.unscale_(optimizer)
+
                         torch.nn.utils.clip_grad_norm_(
-                            model.parameters(), clip
+                            model.parameters(),
+                            clip
                         )
 
                     scaler.step(optimizer)
@@ -132,7 +143,8 @@ def run_epoch(
 
                     if clip:
                         torch.nn.utils.clip_grad_norm_(
-                            model.parameters(), clip
+                            model.parameters(),
+                            clip
                         )
 
                     optimizer.step()
@@ -140,7 +152,24 @@ def run_epoch(
             total += loss.item() * x.size(0)
             n += x.size(0)
 
-    return total / max(n, 1)
+    if n == 0:
+        raise RuntimeError("DataLoader returned no samples.")
+
+    return total / n
+
+
+def load_checkpoint(path, device):
+    """Load a training checkpoint."""
+
+    try:
+        return torch.load(
+            path,
+            map_location=device,
+            weights_only=False
+        )
+    except TypeError:
+        # Compatibility with older PyTorch versions
+        return torch.load(path, map_location=device)
 
 
 def fit(
@@ -158,7 +187,10 @@ def fit(
     model_name = model_name or cfg["model"]["name"]
 
     if model_name not in CKPT_NAMES:
-        raise ValueError(f"Unknown model name: {model_name}")
+        raise ValueError(
+            f"Unknown model name: {model_name}. "
+            f"Available models: {list(CKPT_NAMES)}"
+        )
 
     t = cfg["train"]
 
@@ -169,6 +201,8 @@ def fit(
     device = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu"
     )
+
+    print("Training device:", device)
 
     # Load DataLoaders
     if train_loader is None:
@@ -190,6 +224,11 @@ def fit(
             "val_loader must be supplied when train_loader is provided."
         )
 
+    if len(train_loader) == 0 or len(val_loader) == 0:
+        raise ValueError(
+            "Training and validation DataLoaders must not be empty."
+        )
+
     # Initialize model
     model = build_model(
         model_name,
@@ -204,10 +243,12 @@ def fit(
         lr=t["lr"]
     )
 
-    # Mixed precision
+    # Mixed precision: CUDA only
+    use_amp = bool(t.get("amp", False)) and device.type == "cuda"
+
     scaler = torch.amp.GradScaler(
         "cuda",
-        enabled=t["amp"] and device.type == "cuda"
+        enabled=use_amp
     )
 
     # Loss function
@@ -234,7 +275,20 @@ def fit(
     # Resume training if a checkpoint exists
     if resume and os.path.exists(latest):
 
-        ck = torch.load(latest, map_location=device)
+        ck = load_checkpoint(latest, device)
+
+        required_keys = {
+            "epoch",
+            "model_state_dict",
+            "optimizer_state_dict"
+        }
+
+        missing = required_keys - ck.keys()
+
+        if missing:
+            raise RuntimeError(
+                f"Checkpoint is missing required keys: {missing}"
+            )
 
         model.load_state_dict(ck["model_state_dict"])
         opt.load_state_dict(ck["optimizer_state_dict"])
@@ -253,7 +307,9 @@ def fit(
         "batch": cfg["data"]["batch_size"],
         "lr": t["lr"],
         "loss": t["loss"],
-        "params": count_params(model)
+        "params": count_params(model),
+        "device": str(device),
+        "amp": use_amp
     }
 
     print("\nTraining configuration:")
@@ -272,7 +328,7 @@ def fit(
             device,
             optimizer=opt,
             scaler=scaler,
-            amp=t["amp"],
+            amp=use_amp,
             clip=t.get("grad_clip")
         )
 
@@ -300,23 +356,28 @@ def fit(
             f"| Time: {elapsed:.1f}s"
         )
 
-        # Save latest checkpoint
+        # Determine whether this is the best checkpoint
+        is_best = va < best_val
+
+        if is_best:
+            best_val = va
+
+        # Prepare checkpoint
         ck = {
             "epoch": epoch,
             "model_state_dict": model.state_dict(),
             "optimizer_state_dict": opt.state_dict(),
             "val_loss": va,
-            "best_val": min(best_val, va),
+            "best_val": best_val,
             "history": history,
             "meta": meta
         }
 
+        # Save latest checkpoint
         torch.save(ck, latest)
 
         # Save best checkpoint
-        if va < best_val:
-
-            best_val = va
+        if is_best:
 
             torch.save(ck, best)
 
@@ -324,8 +385,12 @@ def fit(
 
         # Save training history
         with open(log_path, "w") as f:
+
             json.dump(
-                {"meta": meta, "history": history},
+                {
+                    "meta": meta,
+                    "history": history
+                },
                 f,
                 indent=1
             )
@@ -359,7 +424,8 @@ if __name__ == "__main__":
 
     a = ap.parse_args()
 
-    cfg = yaml.safe_load(open(a.config))
+    with open(a.config, "r") as f:
+        cfg = yaml.safe_load(f)
 
     fit(
         cfg,
