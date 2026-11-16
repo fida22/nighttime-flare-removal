@@ -110,7 +110,7 @@ def run_epoch(
                 pred = model(x)
 
             # Calculate loss in float32
-            loss = loss_fn(pred.float(), y.float())
+            loss = loss_fn(pred.float(), y.float(), x.float())
 
             if not torch.isfinite(loss):
                 raise RuntimeError(
