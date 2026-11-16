@@ -4,6 +4,7 @@ H and W should be divisible by 2**depth (256 crops with depth 4 are fine).
 """
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 
 class ConvBlock(nn.Module):
@@ -35,6 +36,8 @@ class UNet(nn.Module):
             self.up.append(nn.ConvTranspose2d(chs[i + 1], chs[i], 2, stride=2))
             self.dec.append(ConvBlock(chs[i] * 2, chs[i]))
         self.head = nn.Conv2d(chs[0], out_ch, 1)
+        nn.init.normal_(self.head.weight, std=1e-3)
+        nn.init.zeros_(self.head.bias)
 
     def make_bottleneck(self, cin, cout):
         return ConvBlock(cin, cout)
@@ -44,6 +47,7 @@ class UNet(nn.Module):
         return enc_feat
 
     def forward(self, x):
+        inp = x
         skips = []
         for blk in self.enc:
             x = blk(x); skips.append(x); x = self.pool(x)
@@ -53,4 +57,4 @@ class UNet(nn.Module):
             s = skips[self.depth - 1 - j]
             s = self.skip(self.depth - 1 - j, s, x)
             x = dec(torch.cat([s, x], dim=1))
-        return torch.sigmoid(self.head(x))
+        return torch.clamp(inp - self.head(x), 0.0, 1.0)   # predict what to subtract
