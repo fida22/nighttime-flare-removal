@@ -25,28 +25,26 @@ def ssim_torch(x, y, window_size=11, data_range=1.0):
 
 
 class L1Loss(nn.Module):
-    def forward(self, pred, target):
+    def forward(self, pred, target, inp=None):
         return F.l1_loss(pred, target)
 
-
 class L1SSIMLoss(nn.Module):
-    """L1 + w * (1 - SSIM). Use only after the plain L1 pipeline works."""
-    def __init__(self, ssim_weight=0.1):
-        super().__init__(); self.w = ssim_weight
+    def __init__(self, ssim_weight=0.1, flare_weight=10.0):
+        super().__init__(); self.w = ssim_weight; self.fw = flare_weight
 
-    def forward(self, pred, target):
-        return F.l1_loss(pred, target) + self.w * (1 - ssim_torch(pred, target))
+    def forward(self, pred, target, inp=None):
+        l1 = (pred - target).abs()
+        if inp is not None:
+            m = (inp - target).abs().mean(1, keepdim=True)        # large where flare is
+            m = m / (m.amax((2, 3), keepdim=True) + 1e-6)
+            l1 = l1 * (1 + self.fw * m)
+        return l1.mean() + self.w * (1 - ssim_torch(pred, target))
 
 
 def build_loss(cfg):
     t = cfg["train"]
-    loss_name = t["loss"]
-
-    if loss_name == "l1":
+    if t["loss"] == "l1":
         return L1Loss()
-
-    elif loss_name == "l1_ssim":
-        return L1SSIMLoss(t["ssim_weight"])
-
-    else:
-        raise ValueError(f"Unknown loss function: {loss_name}")
+    if t["loss"] == "l1_ssim":
+        return L1SSIMLoss(t["ssim_weight"], t.get("flare_weight", 10.0))
+    raise ValueError(f"Unknown loss function: {t['loss']}")
