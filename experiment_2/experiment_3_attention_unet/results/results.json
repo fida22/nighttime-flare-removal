@@ -1,0 +1,62 @@
+{
+  "experiment": "experiment_3_attention_unet",
+  "architecture": "Attention U-Net (compact 16-256 channels)",
+  "training_strategy": "from_scratch",
+  "best_epoch": 20,
+  "best_validation_L1": 0.009711907606571913,
+  "synthetic_validation": {
+    "model_psnr": 34.418590275450704,
+    "model_ssim": 0.9726800918579102,
+    "input_psnr": 30.87555620425169,
+    "input_ssim": 0.9599939584732056
+  },
+  "full_validation_l1_and_residual_stats": {
+    "input_l1": 0.016468156998511403,
+    "model_l1": 0.009675994511693715,
+    "actual_residual_std": 0.04243799941241741,
+    "predicted_residual_std": 0.03201003999263048
+  },
+  "flare_strength_groups": {
+    "Weak": {
+      "count": 167,
+      "mean_residual_strength": 0.001083633462693835,
+      "input_l1": 0.001083633462693835,
+      "model_l1": 0.004142536119267576,
+      "relative_l1_improvement_percent": -282.2820411035969
+    },
+    "Medium": {
+      "count": 166,
+      "mean_residual_strength": 0.00975484287096973,
+      "input_l1": 0.00975484287096973,
+      "model_l1": 0.0071083796960974945,
+      "relative_l1_improvement_percent": 27.12973658189894
+    },
+    "Strong": {
+      "count": 167,
+      "mean_residual_strength": 0.03852579384640662,
+      "input_l1": 0.03852579384640662,
+      "model_l1": 0.01776169207292849,
+      "relative_l1_improvement_percent": 53.89662275684643
+    }
+  },
+  "flare_strength_quantile_boundaries": {
+    "weak_medium": 0.002872002776712179,
+    "medium_strong": 0.019176368291179337
+  },
+  "real_paired_test": null,
+  "image_size": 256,
+  "batch_size": 4,
+  "train_backgrounds": 4000,
+  "validation_backgrounds": 500,
+  "epochs_completed": 20,
+  "epoch_ceiling": 20,
+  "early_stopping_patience": 6,
+  "learning_rate": 0.0001,
+  "loss": {
+    "ordinary_l1_weight": 0.7,
+    "weighted_l1_weight": 0.3,
+    "flare_weight": 10.0,
+    "low_flare_preservation_weight": 0.0
+  },
+  "trainable_parameters": 1965223
+}
