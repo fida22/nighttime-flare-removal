@@ -1,0 +1,66 @@
+{
+  "experiment": "experiment_4_attention_unet_finetune",
+  "architecture": "Attention U-Net (compact 16-256 channels)",
+  "training_strategy": "fine_tuned_from_experiment_3_best_weights",
+  "training_objective": "0.65 ordinary L1 + 0.30 sqrt-residual-weighted L1 + 0.05 gradient L1",
+  "best_epoch": 7,
+  "best_validation_L1": 0.009192894705726455,
+  "synthetic_validation": {
+    "model_psnr": 35.13851567504235,
+    "model_ssim": 0.9750025272369385,
+    "input_psnr": 30.866785838560414,
+    "input_ssim": 0.9605863690376282
+  },
+  "full_validation_l1_and_residual_stats": {
+    "input_l1": 0.01651371981832199,
+    "model_l1": 0.009168723279144616,
+    "actual_residual_std": 0.042818973505248624,
+    "predicted_residual_std": 0.029111792122324308
+  },
+  "flare_strength_groups": {
+    "Weak": {
+      "count": 400,
+      "mean_residual_strength": 0.0011768695821376695,
+      "input_l1": 0.0011768695821376695,
+      "model_l1": 0.002857835643544604,
+      "relative_l1_improvement_percent": -142.83367391938387
+    },
+    "Medium": {
+      "count": 400,
+      "mean_residual_strength": 0.009093711300520226,
+      "input_l1": 0.009093711300520226,
+      "model_l1": 0.0064184208447113636,
+      "relative_l1_improvement_percent": 29.419126772320297
+    },
+    "Strong": {
+      "count": 400,
+      "mean_residual_strength": 0.0392705771420151,
+      "input_l1": 0.0392705771420151,
+      "model_l1": 0.018229912468232214,
+      "relative_l1_improvement_percent": 53.57869989456239
+    }
+  },
+  "flare_strength_quantile_boundaries": {
+    "weak_medium": 0.0029633309071262675,
+    "medium_strong": 0.018776640916864075
+  },
+  "real_paired_test": null,
+  "image_size": 256,
+  "batch_size": 4,
+  "train_backgrounds": 10000,
+  "validation_backgrounds": 1200,
+  "epochs_completed": 9,
+  "epoch_ceiling": 100,
+  "training_budget_hours": 6.5,
+  "training_elapsed_hours": 6.500111115300833,
+  "time_budget_reached": true,
+  "early_stopping_patience": 100,
+  "learning_rate": 2e-05,
+  "loss": {
+    "ordinary_l1_weight": 0.65,
+    "sqrt_residual_weighted_l1_weight": 0.3,
+    "gradient_l1_weight": 0.05,
+    "residual_weight_strength": 3.0
+  },
+  "trainable_parameters": 1965223
+}

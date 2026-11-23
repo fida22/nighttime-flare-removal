@@ -1,0 +1,15 @@
+{
+  "best_epoch": 7,
+  "best_validation_L1": 0.011116582110524178,
+  "synthetic_validation": {
+    "model_psnr": 33.88429710080456,
+    "model_ssim": 0.9680309295654297,
+    "input_psnr": 31.120690945465853,
+    "input_ssim": 0.9602948427200317
+  },
+  "real_paired_test": null,
+  "image_size": 256,
+  "train_backgrounds": 4000,
+  "validation_backgrounds": 500,
+  "epochs_completed": 10
+}
