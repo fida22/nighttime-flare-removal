@@ -1,0 +1,41 @@
+[
+ {
+  "file": "input_000070.png",
+  "input_psnr": 32.375648498535156,
+  "input_ssim": 0.9794559478759766,
+  "baseline_psnr": 30.90061378479004,
+  "baseline_ssim": 0.9758942723274231,
+  "baseline_flare_resid": 0.08146093040704727,
+  "proposed_psnr": 26.17837142944336,
+  "proposed_ssim": 0.9673536419868469,
+  "proposed_flare_resid": 0.11085257679224014,
+  "flare_frac": 0.0312042236328125,
+  "gain": -6.197277069091797
+ },
+ {
+  "file": "input_000079.png",
+  "input_psnr": 17.01321029663086,
+  "input_ssim": 0.8844024538993835,
+  "baseline_psnr": 16.006986618041992,
+  "baseline_ssim": 0.7756058573722839,
+  "baseline_flare_resid": 0.21621231734752655,
+  "proposed_psnr": 16.674381256103516,
+  "proposed_ssim": 0.7969026565551758,
+  "proposed_flare_resid": 0.20171000063419342,
+  "flare_frac": 0.5281105041503906,
+  "gain": -0.33882904052734375
+ },
+ {
+  "file": "input_000030.png",
+  "input_psnr": 28.478734970092773,
+  "input_ssim": 0.9414710402488708,
+  "baseline_psnr": 23.2493953704834,
+  "baseline_ssim": 0.7848367691040039,
+  "baseline_flare_resid": 0.08810039609670639,
+  "proposed_psnr": 23.823410034179688,
+  "proposed_ssim": 0.816791296005249,
+  "proposed_flare_resid": 0.08293455094099045,
+  "flare_frac": 0.12118911743164062,
+  "gain": -4.655324935913086
+ }
+]
