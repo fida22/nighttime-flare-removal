@@ -1,0 +1,317 @@
+[{"stream_name":"stderr","time":8.236097305,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.236134112,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.236137902,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.236140433,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.841000346,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.841027387,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.841031515,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.841035075,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":23.841910723,"data":"PyTorch 2.11.0+cu130 | device: cuda\n"}
+,{"stream_name":"stdout","time":23.841969251,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":30.682056353,"data":"Background        :  23949 images\n"}
+,{"stream_name":"stdout","time":32.905814187,"data":"Scattering        :   5000 images\n"}
+,{"stream_name":"stdout","time":35.113752931,"data":"Scattering light  :   5000 images\n"}
+,{"stream_name":"stdout","time":35.86834507,"data":"Reflective        :   2000 images\n"}
+,{"stream_name":"stdout","time":36.228692489,"data":"Flare-R           :    962 images\n"}
+,{"stream_name":"stdout","time":36.616396573,"data":"Flare-R light     :    962 images\n"}
+,{"stream_name":"stdout","time":36.616451225,"data":"Real input        :    100 images\n"}
+,{"stream_name":"stdout","time":36.616457557,"data":"Real gt           :    100 images\n"}
+,{"stream_name":"stdout","time":36.734443601,"data":"Synthetic input   :    100 images\n"}
+,{"stream_name":"stdout","time":36.734475173999996,"data":"Synthetic gt      :    100 images\n"}
+,{"stream_name":"stdout","time":36.73447964,"data":"Output dir: /kaggle/working/Flare_Final\n"}
+,{"stream_name":"stderr","time":36.771125883,"data":"Cloning into '/kaggle/working/Flare7K'...\n"}
+,{"stream_name":"stderr","time":36.973638542,"data":"Cloning into '/kaggle/working/Flare7K'...\n"}
+,{"stream_name":"stderr","time":36.973674155,"data":"\n"}
+,{"stream_name":"stderr","time":36.973678028,"data":"Cloning into '/kaggle/working/Flare7K'...\n"}
+,{"stream_name":"stdout","time":45.098659417,"data":"Base Image Loaded with examples: 23949\n"}
+,{"stream_name":"stdout","time":45.098702094,"data":"Scattering Flare Image: Flare7K_scattering  is loaded successfully with examples 5000\n"}
+,{"stream_name":"stdout","time":45.09870671,"data":"Now we have 1 scattering flare images\n"}
+,{"stream_name":"stdout","time":45.098709874,"data":"Scattering Flare Image: Flare_R_scattering  is loaded successfully with examples 962\n"}
+,{"stream_name":"stdout","time":45.09871301,"data":"Now we have 2 scattering flare images\n"}
+,{"stream_name":"stdout","time":45.09871599,"data":"Reflective Flare Image: Flare7K_reflective  is loaded successfully with examples 2000\n"}
+,{"stream_name":"stdout","time":45.098718946,"data":"Now we have 1 refelctive flare images\n"}
+,{"stream_name":"stdout","time":45.098721687,"data":"ERROR: reflective flare images are not loaded properly\n"}
+,{"stream_name":"stdout","time":45.098724611,"data":"Now we have 2 refelctive flare images\n"}
+,{"stream_name":"stdout","time":45.098727398,"data":"Light Source Image: Flare7K_light  is loaded successfully with examples 5000\n"}
+,{"stream_name":"stdout","time":45.098741373,"data":"Now we have 1 light source images\n"}
+,{"stream_name":"stdout","time":45.098754651,"data":"Light Source Image: Flare_R_light  is loaded successfully with examples 962\n"}
+,{"stream_name":"stdout","time":45.098757173,"data":"Now we have 2 light source images\n"}
+,{"stream_name":"stdout","time":45.787946464,"data":"{'gt': (3, 512, 512), 'flare': (3, 512, 512), 'lq': (3, 512, 512)}\n"}
+,{"stream_name":"stdout","time":45.787990391,"data":"Official loader OK. Backgrounds: 23949\n"}
+,{"stream_name":"stdout","time":45.948482372,"data":"Backgrounds train/val: 19160 / 4789 | splits disjoint: OK\n"}
+,{"stream_name":"stdout","time":45.948517934,"data":"Train pairs available: 19160 | Val pairs available: 4789\n"}
+,{"stream_name":"stdout","time":145.17482905,"data":"300/300 | 1.7 min\n"}
+,{"stream_name":"stdout","time":146.081351192,"data":"saved /kaggle/temp/val300_512.pt\n"}
+,{"stream_name":"stdout","time":303.016504649,"data":"500/5000 | 2.6 min\n"}
+,{"stream_name":"stdout","time":434.278862722,"data":"1000/5000 | 4.8 min\n"}
+,{"stream_name":"stdout","time":565.306954525,"data":"1500/5000 | 7.0 min\n"}
+,{"stream_name":"stdout","time":713.852565588,"data":"2000/5000 | 9.5 min\n"}
+,{"stream_name":"stdout","time":845.331095286,"data":"2500/5000 | 11.7 min\n"}
+,{"stream_name":"stdout","time":976.258204922,"data":"3000/5000 | 13.8 min\n"}
+,{"stream_name":"stdout","time":1100.680650867,"data":"3500/5000 | 15.9 min\n"}
+,{"stream_name":"stdout","time":1224.221827073,"data":"4000/5000 | 18.0 min\n"}
+,{"stream_name":"stdout","time":1344.479361826,"data":"4500/5000 | 20.0 min\n"}
+,{"stream_name":"stdout","time":1467.586686343,"data":"5000/5000 | 22.0 min\n"}
+,{"stream_name":"stdout","time":1504.533785768,"data":"saved /kaggle/temp/train5000_512.pt\n"}
+,{"stream_name":"stdout","time":1514.983588398,"data":"baseline  params  24.5M | out (2, 3, 256, 256) range (0.000,1.000)\n"}
+,{"stream_name":"stdout","time":1515.307314023,"data":"proposed  params  26.7M | out (2, 3, 256, 256) range (0.000,1.000)\n"}
+,{"stream_name":"stdout","time":1518.266581255,"data":"Reference on validation cache, input left untouched: {'psnr': 23.3334, 'ssim': 0.9189, 'l1': 0.0495, 'n': 300}\n"}
+,{"stream_name":"stdout","time":1518.266618387,"data":"A trained model must beat this PSNR/L1 to be removing flares.\n"}
+,{"stream_name":"stdout","time":1518.626511335,"data":"Downloading: \"https://download.pytorch.org/models/resnet34-b627a593.pth\" to /root/.cache/torch/hub/checkpoints/resnet34-b627a593.pth\n"}
+,{"stream_name":"stderr","time":1518.627438372,"data":"\r  0%|          | 0.00/83.3M [00:00\u003c?, ?B/s]\n"}
+,{"stream_name":"stderr","time":1518.727711181,"data":"\r  0%|          | 0.00/83.3M [00:00\u003c?, ?B/s]\r 13%|█▎        | 10.5M/83.3M [00:00\u003c00:00, 110MB/s]\n"}
+,{"stream_name":"stderr","time":1518.828254789,"data":"\r 13%|█▎        | 10.5M/83.3M [00:00\u003c00:00, 110MB/s]\r 33%|███▎      | 27.8M/83.3M [00:00\u003c00:00, 151MB/s]\n"}
+,{"stream_name":"stderr","time":1518.928685817,"data":"\r 33%|███▎      | 27.8M/83.3M [00:00\u003c00:00, 151MB/s]\r 63%|██████▎   | 52.1M/83.3M [00:00\u003c00:00, 199MB/s]\n"}
+,{"stream_name":"stderr","time":1519.028495431,"data":"\r 63%|██████▎   | 52.1M/83.3M [00:00\u003c00:00, 199MB/s]\r 92%|█████████▏| 76.2M/83.3M [00:00\u003c00:00, 220MB/s]\n"}
+,{"stream_name":"stderr","time":1519.057032788,"data":"\r 92%|█████████▏| 76.2M/83.3M [00:00\u003c00:00, 220MB/s]\r100%|██████████| 83.3M/83.3M [00:00\u003c00:00, 203MB/s]\n"}
+,{"stream_name":"stderr","time":1519.130567167,"data":"\r100%|██████████| 83.3M/83.3M [00:00\u003c00:00, 203MB/s]\n"}
+,{"stream_name":"stderr","time":1519.130598305,"data":"\n"}
+,{"stream_name":"stderr","time":1519.130602121,"data":"\n"}
+,{"stream_name":"stdout","time":1522.700126806,"data":"[baseline] 0.080s/step, ~0.9 min/epoch -\u003e training 120 epochs (~108 min)\n"}
+,{"stream_name":"stdout","time":1589.675160452,"data":"[baseline] epoch 1/120 | train 0.0795 | val L1 0.0303 PSNR 26.81 SSIM 0.9341 | 1.1 min\n"}
+,{"stream_name":"stdout","time":1660.564958862,"data":"[baseline] epoch 2/120 | train 0.0675 | val L1 0.0273 PSNR 27.65 SSIM 0.9348 | 1.2 min\n"}
+,{"stream_name":"stdout","time":1731.540857192,"data":"[baseline] epoch 3/120 | train 0.0646 | val L1 0.0263 PSNR 27.82 SSIM 0.9324 | 1.2 min\n"}
+,{"stream_name":"stdout","time":1803.024900585,"data":"[baseline] epoch 4/120 | train 0.0628 | val L1 0.0335 PSNR 26.79 SSIM 0.9139 | 1.2 min\n"}
+,{"stream_name":"stdout","time":1874.400656688,"data":"[baseline] epoch 5/120 | train 0.0639 | val L1 0.0430 PSNR 25.28 SSIM 0.9001 | 1.2 min\n"}
+,{"stream_name":"stdout","time":1945.471109499,"data":"[baseline] epoch 6/120 | train 0.0610 | val L1 0.0292 PSNR 27.25 SSIM 0.9361 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2016.51646667,"data":"[baseline] epoch 7/120 | train 0.0618 | val L1 0.0298 PSNR 26.94 SSIM 0.9414 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2087.847434365,"data":"[baseline] epoch 8/120 | train 0.0625 | val L1 0.0365 PSNR 26.19 SSIM 0.9342 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2158.923247827,"data":"[baseline] epoch 9/120 | train 0.0619 | val L1 0.0353 PSNR 26.52 SSIM 0.9391 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2229.91886039,"data":"[baseline] epoch 10/120 | train 0.0608 | val L1 0.0282 PSNR 27.73 SSIM 0.9458 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2300.958513,"data":"[baseline] epoch 11/120 | train 0.0590 | val L1 0.0290 PSNR 27.37 SSIM 0.9468 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2371.846715067,"data":"[baseline] epoch 12/120 | train 0.0582 | val L1 0.0341 PSNR 26.45 SSIM 0.9451 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2442.736732524,"data":"[baseline] epoch 13/120 | train 0.0580 | val L1 0.0433 PSNR 25.12 SSIM 0.9411 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2513.622605612,"data":"[baseline] epoch 14/120 | train 0.0568 | val L1 0.0324 PSNR 27.03 SSIM 0.9482 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2584.444655847,"data":"[baseline] epoch 15/120 | train 0.0553 | val L1 0.0255 PSNR 28.19 SSIM 0.9483 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2655.602098537,"data":"[baseline] epoch 16/120 | train 0.0544 | val L1 0.0253 PSNR 28.45 SSIM 0.9509 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2726.93444241,"data":"[baseline] epoch 17/120 | train 0.0527 | val L1 0.0255 PSNR 28.27 SSIM 0.9514 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2797.996291297,"data":"[baseline] epoch 18/120 | train 0.0518 | val L1 0.0264 PSNR 28.22 SSIM 0.9503 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2868.914700909,"data":"[baseline] epoch 19/120 | train 0.0507 | val L1 0.0304 PSNR 27.21 SSIM 0.9414 | 1.2 min\n"}
+,{"stream_name":"stdout","time":2939.863954882,"data":"[baseline] epoch 20/120 | train 0.0501 | val L1 0.0267 PSNR 28.06 SSIM 0.9466 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3011.153330275,"data":"[baseline] epoch 21/120 | train 0.0510 | val L1 0.0266 PSNR 28.20 SSIM 0.9465 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3082.453181485,"data":"[baseline] epoch 22/120 | train 0.0481 | val L1 0.0241 PSNR 28.82 SSIM 0.9530 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3153.725808339,"data":"[baseline] epoch 23/120 | train 0.0472 | val L1 0.0240 PSNR 28.91 SSIM 0.9546 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3225.103063919,"data":"[baseline] epoch 24/120 | train 0.0478 | val L1 0.0310 PSNR 27.22 SSIM 0.9330 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3296.403073383,"data":"[baseline] epoch 25/120 | train 0.0472 | val L1 0.0206 PSNR 29.82 SSIM 0.9581 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3367.853587704,"data":"[baseline] epoch 26/120 | train 0.0464 | val L1 0.0216 PSNR 29.54 SSIM 0.9508 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3439.154904393,"data":"[baseline] epoch 27/120 | train 0.0465 | val L1 0.0228 PSNR 29.11 SSIM 0.9558 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3510.620989501,"data":"[baseline] epoch 28/120 | train 0.0446 | val L1 0.0226 PSNR 29.36 SSIM 0.9484 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3582.207909154,"data":"[baseline] epoch 29/120 | train 0.0443 | val L1 0.0227 PSNR 29.55 SSIM 0.9563 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3653.519512341,"data":"[baseline] epoch 30/120 | train 0.0440 | val L1 0.0212 PSNR 29.75 SSIM 0.9573 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3724.553380235,"data":"[baseline] epoch 31/120 | train 0.0438 | val L1 0.0226 PSNR 29.56 SSIM 0.9584 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3795.618805236,"data":"[baseline] epoch 32/120 | train 0.0429 | val L1 0.0206 PSNR 29.86 SSIM 0.9555 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3866.670116742,"data":"[baseline] epoch 33/120 | train 0.0438 | val L1 0.0209 PSNR 29.76 SSIM 0.9532 | 1.2 min\n"}
+,{"stream_name":"stdout","time":3937.491500134,"data":"[baseline] epoch 34/120 | train 0.0422 | val L1 0.0201 PSNR 30.10 SSIM 0.9589 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4008.435657886,"data":"[baseline] epoch 35/120 | train 0.0420 | val L1 0.0213 PSNR 29.81 SSIM 0.9566 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4079.306544319,"data":"[baseline] epoch 36/120 | train 0.0409 | val L1 0.0233 PSNR 29.44 SSIM 0.9573 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4150.009109231,"data":"[baseline] epoch 37/120 | train 0.0409 | val L1 0.0214 PSNR 29.72 SSIM 0.9531 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4220.826983759,"data":"[baseline] epoch 38/120 | train 0.0411 | val L1 0.0192 PSNR 30.30 SSIM 0.9606 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4291.802922643,"data":"[baseline] epoch 39/120 | train 0.0402 | val L1 0.0212 PSNR 29.85 SSIM 0.9589 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4362.624372833,"data":"[baseline] epoch 40/120 | train 0.0407 | val L1 0.0186 PSNR 30.59 SSIM 0.9610 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4433.588868476,"data":"[baseline] epoch 41/120 | train 0.0391 | val L1 0.0201 PSNR 30.12 SSIM 0.9548 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4504.506677505,"data":"[baseline] epoch 42/120 | train 0.0387 | val L1 0.0214 PSNR 29.96 SSIM 0.9591 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4575.587412581,"data":"[baseline] epoch 43/120 | train 0.0386 | val L1 0.0206 PSNR 30.23 SSIM 0.9597 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4646.706658135,"data":"[baseline] epoch 44/120 | train 0.0387 | val L1 0.0185 PSNR 30.60 SSIM 0.9564 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4717.721721819,"data":"[baseline] epoch 45/120 | train 0.0382 | val L1 0.0194 PSNR 30.48 SSIM 0.9611 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4788.734183997,"data":"[baseline] epoch 46/120 | train 0.0372 | val L1 0.0196 PSNR 30.52 SSIM 0.9627 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4859.68007051,"data":"[baseline] epoch 47/120 | train 0.0384 | val L1 0.0204 PSNR 30.29 SSIM 0.9504 | 1.2 min\n"}
+,{"stream_name":"stdout","time":4930.706666315,"data":"[baseline] epoch 48/120 | train 0.0373 | val L1 0.0190 PSNR 30.49 SSIM 0.9611 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5001.682287811,"data":"[baseline] epoch 49/120 | train 0.0362 | val L1 0.0182 PSNR 30.95 SSIM 0.9607 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5072.795694269,"data":"[baseline] epoch 50/120 | train 0.0365 | val L1 0.0183 PSNR 31.02 SSIM 0.9623 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5143.962267723,"data":"[baseline] epoch 51/120 | train 0.0360 | val L1 0.0188 PSNR 30.79 SSIM 0.9600 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5214.983575893,"data":"[baseline] epoch 52/120 | train 0.0356 | val L1 0.0175 PSNR 31.13 SSIM 0.9633 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5286.191822588,"data":"[baseline] epoch 53/120 | train 0.0353 | val L1 0.0163 PSNR 31.49 SSIM 0.9632 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5357.37650505,"data":"[baseline] epoch 54/120 | train 0.0363 | val L1 0.0169 PSNR 31.46 SSIM 0.9643 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5428.44119023,"data":"[baseline] epoch 55/120 | train 0.0346 | val L1 0.0190 PSNR 30.72 SSIM 0.9605 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5499.511061284,"data":"[baseline] epoch 56/120 | train 0.0348 | val L1 0.0185 PSNR 31.08 SSIM 0.9636 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5570.544106548,"data":"[baseline] epoch 57/120 | train 0.0349 | val L1 0.0177 PSNR 31.23 SSIM 0.9641 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5641.558052108,"data":"[baseline] epoch 58/120 | train 0.0339 | val L1 0.0161 PSNR 31.69 SSIM 0.9655 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5712.675605225,"data":"[baseline] epoch 59/120 | train 0.0337 | val L1 0.0159 PSNR 31.86 SSIM 0.9645 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5783.864039763,"data":"[baseline] epoch 60/120 | train 0.0338 | val L1 0.0174 PSNR 31.71 SSIM 0.9657 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5854.929333889,"data":"[baseline] epoch 61/120 | train 0.0331 | val L1 0.0164 PSNR 31.73 SSIM 0.9657 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5925.942209527,"data":"[baseline] epoch 62/120 | train 0.0330 | val L1 0.0175 PSNR 31.41 SSIM 0.9646 | 1.2 min\n"}
+,{"stream_name":"stdout","time":5997.00256561,"data":"[baseline] epoch 63/120 | train 0.0332 | val L1 0.0163 PSNR 31.75 SSIM 0.9657 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6068.061078045,"data":"[baseline] epoch 64/120 | train 0.0328 | val L1 0.0153 PSNR 32.00 SSIM 0.9659 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6139.192872843,"data":"[baseline] epoch 65/120 | train 0.0323 | val L1 0.0163 PSNR 31.89 SSIM 0.9660 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6210.211718898,"data":"[baseline] epoch 66/120 | train 0.0323 | val L1 0.0157 PSNR 32.07 SSIM 0.9659 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6281.360286568,"data":"[baseline] epoch 67/120 | train 0.0319 | val L1 0.0148 PSNR 32.25 SSIM 0.9662 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6352.533501484,"data":"[baseline] epoch 68/120 | train 0.0319 | val L1 0.0160 PSNR 32.08 SSIM 0.9660 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6423.421829458,"data":"[baseline] epoch 69/120 | train 0.0318 | val L1 0.0152 PSNR 32.29 SSIM 0.9667 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6494.420963458,"data":"[baseline] epoch 70/120 | train 0.0311 | val L1 0.0147 PSNR 32.31 SSIM 0.9675 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6565.489481813,"data":"[baseline] epoch 71/120 | train 0.0311 | val L1 0.0150 PSNR 32.39 SSIM 0.9680 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6636.629940572,"data":"[baseline] epoch 72/120 | train 0.0313 | val L1 0.0168 PSNR 31.86 SSIM 0.9654 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6707.628066414,"data":"[baseline] epoch 73/120 | train 0.0306 | val L1 0.0158 PSNR 31.94 SSIM 0.9631 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6778.641177234,"data":"[baseline] epoch 74/120 | train 0.0304 | val L1 0.0162 PSNR 31.94 SSIM 0.9671 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6849.614254884,"data":"[baseline] epoch 75/120 | train 0.0305 | val L1 0.0148 PSNR 32.43 SSIM 0.9661 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6920.753341083,"data":"[baseline] epoch 76/120 | train 0.0302 | val L1 0.0146 PSNR 32.48 SSIM 0.9687 | 1.2 min\n"}
+,{"stream_name":"stdout","time":6991.910115732,"data":"[baseline] epoch 77/120 | train 0.0297 | val L1 0.0170 PSNR 31.86 SSIM 0.9669 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7062.815336643,"data":"[baseline] epoch 78/120 | train 0.0296 | val L1 0.0153 PSNR 32.27 SSIM 0.9664 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7133.832142673,"data":"[baseline] epoch 79/120 | train 0.0297 | val L1 0.0140 PSNR 32.77 SSIM 0.9686 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7204.855493587,"data":"[baseline] epoch 80/120 | train 0.0290 | val L1 0.0143 PSNR 32.64 SSIM 0.9688 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7275.595207861,"data":"[baseline] epoch 81/120 | train 0.0297 | val L1 0.0142 PSNR 32.57 SSIM 0.9675 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7346.340602453,"data":"[baseline] epoch 82/120 | train 0.0293 | val L1 0.0135 PSNR 32.95 SSIM 0.9697 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7417.309012793,"data":"[baseline] epoch 83/120 | train 0.0287 | val L1 0.0147 PSNR 32.51 SSIM 0.9695 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7488.355786477,"data":"[baseline] epoch 84/120 | train 0.0284 | val L1 0.0134 PSNR 32.93 SSIM 0.9698 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7559.446569032,"data":"[baseline] epoch 85/120 | train 0.0288 | val L1 0.0130 PSNR 33.09 SSIM 0.9704 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7630.616438722,"data":"[baseline] epoch 86/120 | train 0.0281 | val L1 0.0139 PSNR 32.79 SSIM 0.9690 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7701.808381792,"data":"[baseline] epoch 87/120 | train 0.0286 | val L1 0.0140 PSNR 32.81 SSIM 0.9667 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7773.064250093,"data":"[baseline] epoch 88/120 | train 0.0278 | val L1 0.0136 PSNR 32.97 SSIM 0.9700 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7844.210369965,"data":"[baseline] epoch 89/120 | train 0.0282 | val L1 0.0144 PSNR 32.66 SSIM 0.9693 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7915.374339708,"data":"[baseline] epoch 90/120 | train 0.0275 | val L1 0.0134 PSNR 33.04 SSIM 0.9697 | 1.2 min\n"}
+,{"stream_name":"stdout","time":7986.507979496,"data":"[baseline] epoch 91/120 | train 0.0275 | val L1 0.0136 PSNR 33.00 SSIM 0.9703 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8057.536272204,"data":"[baseline] epoch 92/120 | train 0.0277 | val L1 0.0140 PSNR 32.80 SSIM 0.9702 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8128.612709118,"data":"[baseline] epoch 93/120 | train 0.0271 | val L1 0.0138 PSNR 32.89 SSIM 0.9688 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8199.270298059,"data":"[baseline] epoch 94/120 | train 0.0273 | val L1 0.0134 PSNR 33.04 SSIM 0.9675 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8270.109379256,"data":"[baseline] epoch 95/120 | train 0.0270 | val L1 0.0134 PSNR 33.16 SSIM 0.9697 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8341.063296227,"data":"[baseline] epoch 96/120 | train 0.0275 | val L1 0.0130 PSNR 33.22 SSIM 0.9705 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8411.879931194,"data":"[baseline] epoch 97/120 | train 0.0271 | val L1 0.0144 PSNR 32.76 SSIM 0.9685 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8482.870428187,"data":"[baseline] epoch 98/120 | train 0.0267 | val L1 0.0131 PSNR 33.23 SSIM 0.9706 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8554.138849423,"data":"[baseline] epoch 99/120 | train 0.0267 | val L1 0.0136 PSNR 33.12 SSIM 0.9704 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8625.043877124,"data":"[baseline] epoch 100/120 | train 0.0266 | val L1 0.0128 PSNR 33.33 SSIM 0.9699 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8695.887489737,"data":"[baseline] epoch 101/120 | train 0.0266 | val L1 0.0129 PSNR 33.30 SSIM 0.9708 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8766.915717195,"data":"[baseline] epoch 102/120 | train 0.0262 | val L1 0.0131 PSNR 33.26 SSIM 0.9710 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8837.86398763,"data":"[baseline] epoch 103/120 | train 0.0262 | val L1 0.0133 PSNR 33.17 SSIM 0.9700 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8908.949633532,"data":"[baseline] epoch 104/120 | train 0.0264 | val L1 0.0138 PSNR 33.01 SSIM 0.9690 | 1.2 min\n"}
+,{"stream_name":"stdout","time":8980.116055758,"data":"[baseline] epoch 105/120 | train 0.0263 | val L1 0.0127 PSNR 33.34 SSIM 0.9712 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9051.264247899,"data":"[baseline] epoch 106/120 | train 0.0261 | val L1 0.0131 PSNR 33.32 SSIM 0.9710 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9122.372775591,"data":"[baseline] epoch 107/120 | train 0.0260 | val L1 0.0135 PSNR 33.14 SSIM 0.9696 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9193.357292777,"data":"[baseline] epoch 108/120 | train 0.0260 | val L1 0.0131 PSNR 33.27 SSIM 0.9709 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9264.328483843,"data":"[baseline] epoch 109/120 | train 0.0261 | val L1 0.0132 PSNR 33.29 SSIM 0.9711 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9335.291608471,"data":"[baseline] epoch 110/120 | train 0.0260 | val L1 0.0128 PSNR 33.34 SSIM 0.9710 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9406.307144592,"data":"[baseline] epoch 111/120 | train 0.0259 | val L1 0.0126 PSNR 33.45 SSIM 0.9714 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9477.528513571,"data":"[baseline] epoch 112/120 | train 0.0258 | val L1 0.0130 PSNR 33.27 SSIM 0.9701 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9548.578816839,"data":"[baseline] epoch 113/120 | train 0.0262 | val L1 0.0132 PSNR 33.24 SSIM 0.9698 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9619.520869556,"data":"[baseline] epoch 114/120 | train 0.0258 | val L1 0.0133 PSNR 33.21 SSIM 0.9705 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9690.462611569,"data":"[baseline] epoch 115/120 | train 0.0260 | val L1 0.0131 PSNR 33.25 SSIM 0.9705 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9761.557817593,"data":"[baseline] epoch 116/120 | train 0.0258 | val L1 0.0127 PSNR 33.44 SSIM 0.9706 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9832.525055389,"data":"[baseline] epoch 117/120 | train 0.0258 | val L1 0.0131 PSNR 33.30 SSIM 0.9706 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9903.503281495,"data":"[baseline] epoch 118/120 | train 0.0258 | val L1 0.0132 PSNR 33.29 SSIM 0.9704 | 1.2 min\n"}
+,{"stream_name":"stdout","time":9974.498676796,"data":"[baseline] epoch 119/120 | train 0.0257 | val L1 0.0126 PSNR 33.44 SSIM 0.9714 | 1.2 min\n"}
+,{"stream_name":"stdout","time":10045.500232849,"data":"[baseline] epoch 120/120 | train 0.0256 | val L1 0.0126 PSNR 33.45 SSIM 0.9717 | 1.2 min\n"}
+,{"stream_name":"stdout","time":10045.712070063,"data":"[baseline] done. best val PSNR 33.45\n"}
+,{"stream_name":"stdout","time":10049.815356904,"data":"[proposed] 0.107s/step, ~1.2 min/epoch -\u003e training 99 epochs (~119 min)\n"}
+,{"stream_name":"stdout","time":10134.174077744,"data":"[proposed] epoch 1/99 | train 0.0800 | val L1 0.0304 PSNR 26.79 SSIM 0.9303 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10218.596907664,"data":"[proposed] epoch 2/99 | train 0.0673 | val L1 0.0461 PSNR 24.87 SSIM 0.9045 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10302.80813181,"data":"[proposed] epoch 3/99 | train 0.0650 | val L1 0.0303 PSNR 27.34 SSIM 0.9355 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10387.433172429,"data":"[proposed] epoch 4/99 | train 0.0645 | val L1 0.0354 PSNR 25.96 SSIM 0.9278 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10472.721393857,"data":"[proposed] epoch 5/99 | train 0.0640 | val L1 0.0294 PSNR 27.50 SSIM 0.9420 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10557.460684796,"data":"[proposed] epoch 6/99 | train 0.0643 | val L1 0.0339 PSNR 26.72 SSIM 0.9393 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10641.85736019,"data":"[proposed] epoch 7/99 | train 0.0630 | val L1 0.0461 PSNR 25.20 SSIM 0.9114 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10726.182308437,"data":"[proposed] epoch 8/99 | train 0.0627 | val L1 0.0375 PSNR 25.93 SSIM 0.9375 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10810.797171595,"data":"[proposed] epoch 9/99 | train 0.0608 | val L1 0.0323 PSNR 26.81 SSIM 0.9456 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10895.334500463,"data":"[proposed] epoch 10/99 | train 0.0588 | val L1 0.0280 PSNR 27.55 SSIM 0.9461 | 1.4 min\n"}
+,{"stream_name":"stdout","time":10980.311008323,"data":"[proposed] epoch 11/99 | train 0.0579 | val L1 0.0288 PSNR 27.63 SSIM 0.9478 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11065.100920987,"data":"[proposed] epoch 12/99 | train 0.0566 | val L1 0.0327 PSNR 26.16 SSIM 0.9331 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11149.771215218,"data":"[proposed] epoch 13/99 | train 0.0549 | val L1 0.0256 PSNR 28.36 SSIM 0.9511 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11234.637584435,"data":"[proposed] epoch 14/99 | train 0.0547 | val L1 0.0242 PSNR 28.72 SSIM 0.9521 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11319.39605915,"data":"[proposed] epoch 15/99 | train 0.0531 | val L1 0.0240 PSNR 28.65 SSIM 0.9493 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11403.624358859,"data":"[proposed] epoch 16/99 | train 0.0515 | val L1 0.0266 PSNR 28.30 SSIM 0.9512 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11487.90468196,"data":"[proposed] epoch 17/99 | train 0.0505 | val L1 0.0301 PSNR 27.52 SSIM 0.9440 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11572.187010185,"data":"[proposed] epoch 18/99 | train 0.0500 | val L1 0.0276 PSNR 28.09 SSIM 0.9519 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11656.47392991,"data":"[proposed] epoch 19/99 | train 0.0497 | val L1 0.0279 PSNR 28.09 SSIM 0.9509 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11740.851683529,"data":"[proposed] epoch 20/99 | train 0.0490 | val L1 0.0253 PSNR 28.08 SSIM 0.9506 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11825.182877082,"data":"[proposed] epoch 21/99 | train 0.0481 | val L1 0.0315 PSNR 27.47 SSIM 0.9497 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11909.467197369,"data":"[proposed] epoch 22/99 | train 0.0463 | val L1 0.0256 PSNR 28.25 SSIM 0.9474 | 1.4 min\n"}
+,{"stream_name":"stdout","time":11993.750751177,"data":"[proposed] epoch 23/99 | train 0.0456 | val L1 0.0251 PSNR 28.72 SSIM 0.9517 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12078.176369898,"data":"[proposed] epoch 24/99 | train 0.0454 | val L1 0.0206 PSNR 29.61 SSIM 0.9574 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12162.729506048,"data":"[proposed] epoch 25/99 | train 0.0456 | val L1 0.0224 PSNR 29.42 SSIM 0.9564 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12247.058535872,"data":"[proposed] epoch 26/99 | train 0.0445 | val L1 0.0265 PSNR 28.42 SSIM 0.9538 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12331.391098957,"data":"[proposed] epoch 27/99 | train 0.0438 | val L1 0.0215 PSNR 29.57 SSIM 0.9526 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12415.762045573,"data":"[proposed] epoch 28/99 | train 0.0435 | val L1 0.0215 PSNR 29.55 SSIM 0.9578 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12500.0682303,"data":"[proposed] epoch 29/99 | train 0.0428 | val L1 0.0205 PSNR 29.89 SSIM 0.9579 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12584.552657259,"data":"[proposed] epoch 30/99 | train 0.0428 | val L1 0.0234 PSNR 29.23 SSIM 0.9554 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12668.845182823,"data":"[proposed] epoch 31/99 | train 0.0419 | val L1 0.0196 PSNR 30.26 SSIM 0.9614 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12753.252422262,"data":"[proposed] epoch 32/99 | train 0.0410 | val L1 0.0203 PSNR 29.91 SSIM 0.9578 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12837.461694862,"data":"[proposed] epoch 33/99 | train 0.0408 | val L1 0.0203 PSNR 30.04 SSIM 0.9589 | 1.4 min\n"}
+,{"stream_name":"stdout","time":12921.681184742,"data":"[proposed] epoch 34/99 | train 0.0405 | val L1 0.0204 PSNR 29.99 SSIM 0.9597 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13006.013614268,"data":"[proposed] epoch 35/99 | train 0.0399 | val L1 0.0216 PSNR 29.53 SSIM 0.9536 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13090.288663565,"data":"[proposed] epoch 36/99 | train 0.0400 | val L1 0.0203 PSNR 30.19 SSIM 0.9573 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13174.536626045,"data":"[proposed] epoch 37/99 | train 0.0395 | val L1 0.0188 PSNR 30.31 SSIM 0.9610 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13258.895863894,"data":"[proposed] epoch 38/99 | train 0.0389 | val L1 0.0184 PSNR 30.72 SSIM 0.9623 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13343.343459065,"data":"[proposed] epoch 39/99 | train 0.0380 | val L1 0.0187 PSNR 30.54 SSIM 0.9615 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13427.558691891,"data":"[proposed] epoch 40/99 | train 0.0375 | val L1 0.0184 PSNR 30.58 SSIM 0.9591 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13511.821899246,"data":"[proposed] epoch 41/99 | train 0.0379 | val L1 0.0172 PSNR 30.89 SSIM 0.9627 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13596.258336579,"data":"[proposed] epoch 42/99 | train 0.0373 | val L1 0.0194 PSNR 30.48 SSIM 0.9599 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13680.563278901,"data":"[proposed] epoch 43/99 | train 0.0364 | val L1 0.0191 PSNR 30.29 SSIM 0.9574 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13764.781267809,"data":"[proposed] epoch 44/99 | train 0.0362 | val L1 0.0208 PSNR 30.19 SSIM 0.9611 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13849.135445142,"data":"[proposed] epoch 45/99 | train 0.0359 | val L1 0.0182 PSNR 30.96 SSIM 0.9625 | 1.4 min\n"}
+,{"stream_name":"stdout","time":13933.657376408,"data":"[proposed] epoch 46/99 | train 0.0356 | val L1 0.0166 PSNR 31.24 SSIM 0.9607 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14017.936299677,"data":"[proposed] epoch 47/99 | train 0.0354 | val L1 0.0173 PSNR 31.19 SSIM 0.9630 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14102.13695362,"data":"[proposed] epoch 48/99 | train 0.0354 | val L1 0.0165 PSNR 31.45 SSIM 0.9635 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14186.562942305,"data":"[proposed] epoch 49/99 | train 0.0356 | val L1 0.0178 PSNR 31.17 SSIM 0.9627 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14270.729609762,"data":"[proposed] epoch 50/99 | train 0.0353 | val L1 0.0165 PSNR 31.31 SSIM 0.9636 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14354.932045601,"data":"[proposed] epoch 51/99 | train 0.0340 | val L1 0.0156 PSNR 31.62 SSIM 0.9660 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14439.313080114,"data":"[proposed] epoch 52/99 | train 0.0343 | val L1 0.0174 PSNR 31.43 SSIM 0.9645 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14523.577649699,"data":"[proposed] epoch 53/99 | train 0.0336 | val L1 0.0182 PSNR 31.11 SSIM 0.9638 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14607.877028365,"data":"[proposed] epoch 54/99 | train 0.0329 | val L1 0.0167 PSNR 31.67 SSIM 0.9649 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14692.273825636,"data":"[proposed] epoch 55/99 | train 0.0326 | val L1 0.0181 PSNR 31.00 SSIM 0.9627 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14776.346864111,"data":"[proposed] epoch 56/99 | train 0.0330 | val L1 0.0163 PSNR 31.93 SSIM 0.9654 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14860.719952826,"data":"[proposed] epoch 57/99 | train 0.0328 | val L1 0.0165 PSNR 31.55 SSIM 0.9654 | 1.4 min\n"}
+,{"stream_name":"stdout","time":14944.965607486,"data":"[proposed] epoch 58/99 | train 0.0320 | val L1 0.0176 PSNR 31.19 SSIM 0.9621 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15029.057578175,"data":"[proposed] epoch 59/99 | train 0.0325 | val L1 0.0162 PSNR 31.99 SSIM 0.9659 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15113.367879742,"data":"[proposed] epoch 60/99 | train 0.0318 | val L1 0.0151 PSNR 32.11 SSIM 0.9668 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15197.763595402,"data":"[proposed] epoch 61/99 | train 0.0313 | val L1 0.0154 PSNR 32.20 SSIM 0.9671 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15282.052399622,"data":"[proposed] epoch 62/99 | train 0.0310 | val L1 0.0149 PSNR 32.27 SSIM 0.9653 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15366.270133607,"data":"[proposed] epoch 63/99 | train 0.0309 | val L1 0.0153 PSNR 32.11 SSIM 0.9660 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15450.318690511,"data":"[proposed] epoch 64/99 | train 0.0310 | val L1 0.0143 PSNR 32.57 SSIM 0.9671 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15534.59765607,"data":"[proposed] epoch 65/99 | train 0.0305 | val L1 0.0146 PSNR 32.39 SSIM 0.9672 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15618.715236024,"data":"[proposed] epoch 66/99 | train 0.0304 | val L1 0.0155 PSNR 32.04 SSIM 0.9655 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15702.929187068,"data":"[proposed] epoch 67/99 | train 0.0297 | val L1 0.0162 PSNR 31.93 SSIM 0.9676 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15787.352406409,"data":"[proposed] epoch 68/99 | train 0.0301 | val L1 0.0141 PSNR 32.63 SSIM 0.9680 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15872.229794169,"data":"[proposed] epoch 69/99 | train 0.0300 | val L1 0.0139 PSNR 32.54 SSIM 0.9688 | 1.4 min\n"}
+,{"stream_name":"stdout","time":15956.8685852,"data":"[proposed] epoch 70/99 | train 0.0294 | val L1 0.0140 PSNR 32.70 SSIM 0.9690 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16041.450584361,"data":"[proposed] epoch 71/99 | train 0.0292 | val L1 0.0141 PSNR 32.64 SSIM 0.9690 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16125.857773185,"data":"[proposed] epoch 72/99 | train 0.0295 | val L1 0.0146 PSNR 32.53 SSIM 0.9674 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16210.252508808,"data":"[proposed] epoch 73/99 | train 0.0290 | val L1 0.0149 PSNR 32.30 SSIM 0.9687 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16294.548057806,"data":"[proposed] epoch 74/99 | train 0.0288 | val L1 0.0134 PSNR 32.85 SSIM 0.9696 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16378.931519369,"data":"[proposed] epoch 75/99 | train 0.0284 | val L1 0.0138 PSNR 32.86 SSIM 0.9692 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16463.350568029,"data":"[proposed] epoch 76/99 | train 0.0285 | val L1 0.0140 PSNR 32.67 SSIM 0.9688 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16547.651410839,"data":"[proposed] epoch 77/99 | train 0.0286 | val L1 0.0131 PSNR 32.96 SSIM 0.9697 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16632.48290801,"data":"[proposed] epoch 78/99 | train 0.0284 | val L1 0.0136 PSNR 32.83 SSIM 0.9694 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16717.027511531,"data":"[proposed] epoch 79/99 | train 0.0284 | val L1 0.0142 PSNR 32.68 SSIM 0.9683 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16801.495101485,"data":"[proposed] epoch 80/99 | train 0.0280 | val L1 0.0137 PSNR 32.88 SSIM 0.9691 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16885.878329205,"data":"[proposed] epoch 81/99 | train 0.0279 | val L1 0.0141 PSNR 32.77 SSIM 0.9690 | 1.4 min\n"}
+,{"stream_name":"stdout","time":16970.350915848,"data":"[proposed] epoch 82/99 | train 0.0275 | val L1 0.0141 PSNR 32.74 SSIM 0.9687 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17054.680007806,"data":"[proposed] epoch 83/99 | train 0.0275 | val L1 0.0141 PSNR 32.80 SSIM 0.9689 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17138.997408112,"data":"[proposed] epoch 84/99 | train 0.0273 | val L1 0.0134 PSNR 33.05 SSIM 0.9700 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17223.601966164,"data":"[proposed] epoch 85/99 | train 0.0274 | val L1 0.0138 PSNR 32.84 SSIM 0.9692 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17308.071087654,"data":"[proposed] epoch 86/99 | train 0.0273 | val L1 0.0134 PSNR 32.94 SSIM 0.9697 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17392.720659546,"data":"[proposed] epoch 87/99 | train 0.0267 | val L1 0.0137 PSNR 32.94 SSIM 0.9696 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17477.352406354,"data":"[proposed] epoch 88/99 | train 0.0272 | val L1 0.0138 PSNR 32.93 SSIM 0.9691 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17562.180177668,"data":"[proposed] epoch 89/99 | train 0.0270 | val L1 0.0131 PSNR 33.06 SSIM 0.9704 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17647.07469712,"data":"[proposed] epoch 90/99 | train 0.0270 | val L1 0.0133 PSNR 33.08 SSIM 0.9704 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17731.946478594,"data":"[proposed] epoch 91/99 | train 0.0266 | val L1 0.0134 PSNR 32.96 SSIM 0.9697 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17816.645749917,"data":"[proposed] epoch 92/99 | train 0.0270 | val L1 0.0134 PSNR 33.06 SSIM 0.9699 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17901.535824404,"data":"[proposed] epoch 93/99 | train 0.0268 | val L1 0.0131 PSNR 33.14 SSIM 0.9702 | 1.4 min\n"}
+,{"stream_name":"stdout","time":17986.259473521,"data":"[proposed] epoch 94/99 | train 0.0265 | val L1 0.0132 PSNR 33.11 SSIM 0.9703 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18071.01825238,"data":"[proposed] epoch 95/99 | train 0.0263 | val L1 0.0132 PSNR 33.21 SSIM 0.9701 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18155.886365678,"data":"[proposed] epoch 96/99 | train 0.0265 | val L1 0.0130 PSNR 33.11 SSIM 0.9703 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18240.541209343,"data":"[proposed] epoch 97/99 | train 0.0265 | val L1 0.0134 PSNR 33.10 SSIM 0.9698 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18325.460097713,"data":"[proposed] epoch 98/99 | train 0.0267 | val L1 0.0131 PSNR 33.08 SSIM 0.9700 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18410.07383234,"data":"[proposed] epoch 99/99 | train 0.0263 | val L1 0.0132 PSNR 33.09 SSIM 0.9702 | 1.4 min\n"}
+,{"stream_name":"stdout","time":18410.328177317,"data":"[proposed] done. best val PSNR 33.21\n"}
+,{"stream_name":"stdout","time":18411.340421178,"data":"Dashed grey line = input left untouched. Curves above it mean flares are being removed.\n"}
+,{"stream_name":"stdout","time":18463.923217861,"data":"set        model                             PSNR     SSIM   s/img\n"}
+,{"stream_name":"stdout","time":18463.923258859,"data":"real       Input (no processing)            22.56   0.8609   0.000\n"}
+,{"stream_name":"stdout","time":18463.923269384,"data":"real       Baseline ResNet34-UNet           26.94   0.8637   0.047\n"}
+,{"stream_name":"stdout","time":18463.923272761,"data":"real       Proposed (attn + multiscale)     26.75   0.8595   0.052\n"}
+,{"stream_name":"stdout","time":18463.923275777,"data":"synthetic  Input (no processing)            22.77   0.9244   0.000\n"}
+,{"stream_name":"stdout","time":18463.923278837,"data":"synthetic  Baseline ResNet34-UNet           28.45   0.9376   0.048\n"}
+,{"stream_name":"stdout","time":18463.923281712,"data":"synthetic  Proposed (attn + multiscale)     28.20   0.9370   0.053\n"}
+,{"stream_name":"stdout","time":18463.923284595,"data":"\n"}
+,{"stream_name":"stdout","time":18463.92328736,"data":"Saved: /kaggle/working/Flare_Final/results/metrics/test_metrics.json\n"}
+,{"stream_name":"stdout","time":18469.356274039,"data":"saved /kaggle/working/Flare_Final/results/figures/real_comparison.png\n"}
+,{"stream_name":"stdout","time":18474.340023147,"data":"saved /kaggle/working/Flare_Final/results/figures/synthetic_comparison.png\n"}
+,{"stream_name":"stderr","time":18481.324520201,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":18481.324564098,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":18481.568589473,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":18481.568619007,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":18482.663439422,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":18482.896885729,"data":"[NbConvertApp] Writing 8239227 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":18485.460242812,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":18486.508560664,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":18486.508585477,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":18486.508891628,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":18486.510127896,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":18486.51134353,"data":"[NbConvertApp] Writing 484238 bytes to __results__.html\n"}
+]
